@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+dist/
+*.sqlite3*
+*.db
+*.log
+.env*
+exports/
+.venv/
+adapter.local.json
+private-data/

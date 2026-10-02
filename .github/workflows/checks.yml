@@ -1,0 +1,32 @@
+name: Frontend cross-platform checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    name: Frontend ${{ matrix.os }} Python 3.10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.10'
+      - name: Frontend unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Build portable downloads
+        run: python build.py
+      - name: Packaged frontend and OS launcher smoke
+        run: python scripts/smoke_release.py

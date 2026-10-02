@@ -1,0 +1,33 @@
+{
+  "schema": "prediction-cli-snapshot-v1",
+  "symbol": "BTC/USD",
+  "horizon_seconds": 900,
+  "mode": "synthetic",
+  "status": "idle",
+  "model": "demo-mock",
+  "models": [
+    "demo-mock"
+  ],
+  "as_of": 0,
+  "metrics": {
+    "forecast_score": null,
+    "accuracy": null,
+    "skipped": 1
+  },
+  "events": [
+    {
+      "id": "demo-1",
+      "type": "skip",
+      "at": 0,
+      "model": "demo-mock",
+      "summary": "Example: weak evidence, so the forecast was skipped."
+    },
+    {
+      "id": "demo-2",
+      "type": "status",
+      "at": 0,
+      "model": "demo-mock",
+      "summary": "Synthetic interface demo. No backend or model ran."
+    }
+  ]
+}

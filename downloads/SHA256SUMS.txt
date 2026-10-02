@@ -1,0 +1,5 @@
+9bb2905f373e4f26b7de9ce4fe89eecfc246e0046abba69c9103cd81b2030717  prediction-cli-1.0.0-linux-portable.zip
+18eb179deb4fa47342b5432f3aba18f571ec3703a494acc59a10fff124dc359a  prediction-cli-1.0.0-macos-portable.zip
+9721779f1978fee578578a16c9ce1297d6ff56db466755a9ce7e3c6b40fa85ad  prediction-cli-1.0.0-source.zip
+dcef4a009f7782050a3cb42886da4e6534cfdf9135f996b2171a1fcc79a6de3a  prediction-cli-1.0.0-windows-portable.zip
+c785e199c904c396f37ccbddf4a6e04378f7cb212fd9fa43aeb2e8bd73726184  prediction-cli.pyz
